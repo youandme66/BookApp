@@ -1,0 +1,57 @@
+<ion-side-menus>
+    <ion-side-menu-content drag-content="true">
+        <ion-header-bar align-title="center" class="bar-stable bar-dark">
+        <div class="buttons">
+            <button class="button no-animation button-icon icon ion-ios-list-outline" my-left>
+            </button>
+        </div>
+        <div class="wodivh1 title text">破万卷</div>        
+    </ion-header-bar>
+<ion-tabs class="tabs-icon-top tabs-color-active-balanced {{hideta}}">
+    <ion-tab title="书房" icon-on="ion-ios-home clam" icon-off="ion-ios-home-outline" ui-sref="tab.book">
+        <ion-nav-view animation="slide-left-right" name="tab-book"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="发现" icon-on="ion-ios-book clam" icon-off="ion-ios-book-outline" ui-sref="tab.find">
+        <ion-nav-view animation="slide-left-right" name="tab-find"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="通讯录" icon-on="ion-ios-chatbubble clam" icon-off="ion-ios-chatbubble-outline" ui-sref="tab.chat">
+        <ion-nav-view animation="slide-left-right" name="tab-chat"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+    <ion-header-bar align-title="center" class="bar-stable bar-dark"></ion-header-bar>
+    <ion-content class="rj-stable-content" delegate-handle="sideScroll" id="userRegister">
+      <div class="list text">
+      <a class="item" ng-click="gologin()">
+                <div class="set-img-login"  style="background: url({{uimage}});"></div>
+                  <div  clas="set-menu-login" style="text-align: center;">
+                   <p style="font-size: 17px;" class="text" id="set-status" ng-hide="uname">请登录账号</p>
+                    <p style="font-size: 17px;" class="text" id="set-status2" ng-show="uname" ng-bind="uname"></p>
+                  </div>
+      </a>
+  <a class="item item-icon-left" ng-click="go('selfinfor')">
+    <i class="icon ion-ios-personadd-outline"></i>
+    个人信息
+  </a>
+
+  <a class="item item-icon-left set-menu-text" ng-click="go('punchread')">
+    <i class="icon ion-calendar"></i>
+    读书打卡
+  </a>
+
+  <a class="item item-icon-left set-menu-text" ng-click="go('mybookcase')">
+    <i class="icon ion-ios-albums-outline"></i>
+   我的书架
+  </a>
+
+  <a class="item item-icon-left set-menu-text" ng-click="go('other')">
+    <i class="icon ion-ios-briefcase-outline"></i>
+    其他
+  </a>
+
+</div>
+    </ion-content>
+    <ion-tabs class="tabs-icon-top tabs-color-active-balanced"></ion-tabs>
+    </ion-side-menu>
+</ion-side-menus>

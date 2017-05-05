@@ -1,0 +1,48 @@
+<ion-view view-title="个人信息">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">详情信息</div>
+	</ion-header-bar>
+	<ion-content class="color-bg">
+		<ul class="list"></ul>
+		<ul class="list setting-style">
+			<li class="item small-pic">
+				<h2 class="left-column  text">头像</h2>
+				<img ng-src="{{url+selfinfor.uimage}}"  alt="头像缩略图" class="right-column ">
+			</li>
+			<li class="item">
+				<h2 class="left-column  text">昵称</h2>
+				<span class="right-column  text" ng-bind="selfinfor.uname"></span>
+			</li>
+			<li class="item">
+				<h2 class="left-column  text">QQ号</h2>
+				<span class="right-column  text" ng-bind="selfinfor.uqq"></span>
+			</li>
+			<li class="item">
+				<h2 class="left-column text">手机号</h2>
+				<span class="right-column text" ng-bind="selfinfor.uphone"></span>
+			</li>
+			<li class="item">
+				<h2 class="left-column  text">等级</h2>
+				<span class="right-column  text" ng-bind="selfinfor.ulevel"></span>
+			</li>
+		</ul>
+		<ul class="list setting-style">
+			<li class="item">
+				<h2 class="left-column  text">卷币</h2>
+				<span class="right-column  text" ng-bind="selfinfor.umoney"></span>
+			</li>
+			<li class="item">
+				<h2 class="left-column  text">邮箱</h2>
+				<span class="right-column hand_cursor  text" ng-bind="selfinfor.uemail"></span>
+			</li>
+			<li class="item">
+				<h2 class="left-column  text">个性签名</h2>
+				<span class="right-column  text" ng-bind="selfinfor.signature"></span>
+			</li>
+		</ul>
+	</ion-content>
+</ion-view>

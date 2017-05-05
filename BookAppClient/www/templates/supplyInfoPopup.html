@@ -1,0 +1,23 @@
+<ion-header-bar align-title="center" class="bar-dark"><div class="wodivh1 title text">完善信息</div></ion-header-bar>
+<ion-list>
+<form name="supply" novalidate>
+    <ion-item class="my-popup item-input" style="margin-top:44px;">
+    <input type="text" class="text" placeholder="邮箱" name="email" ng-pattern="/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/" ng-model="user.uemail" required>
+    <i class="icon ion-android-close assertive ion" ng-show="supply.email.$dirty &&supply.email.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="supply.email.$dirty&&supply.email.$valid" ></i>
+    </ion-item>
+    <ion-item class="my-popup item-input">
+     <input type="text" class="text" placeholder="QQ" name="QQ" ng-pattern="/^[0-9]{6,10}$/" ng-model="user.uqq" required>
+    <i class="icon ion-android-close assertive ion" ng-show="supply.QQ.$dirty &&supply.QQ.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="supply.QQ.$dirty&&supply.QQ.$valid" ></i>
+    </ion-item>
+    <ion-item class="my-popup item-input">
+        <input type="text" class="text" placeholder="签名" name="signature" ng-maxlength="100" ng-model="user.signature" required>
+    <i class="icon ion-android-close assertive ion" ng-show="supply.signature.$dirty &&supply.signature.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="supply.signature.$dirty&&supply.signature.$valid" ></i>
+    </ion-item>
+    <ion-item>
+    <button class="button button-block button-assertive text" ng-click="supplyInfo()" ng-disabled="supply.email.$invalid ||supply.QQ.$invalid || supply.signature.$invalid || supply.email.$pristine && supply.QQ.$pristine && supply.signature.$pristine">保存</button>
+    </ion-item>
+</form>
+</ion-list>

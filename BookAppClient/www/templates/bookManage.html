@@ -1,0 +1,55 @@
+<ion-view view-title="书籍详情">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text" ng-bind="book.bname"></div>
+	</ion-header-bar>
+    <ion-content has-subheader="true">
+<form name="supplybook" novalidate>
+    <ion-item style="height:50px;" class="my-popup item-input">
+    <input type="text" class="text" placeholder="书名" name="name" ng-minlength="2" ng-maxlength="8" ng-model="book.bname" required>
+    <i class="icon ion-android-close assertive ion" ng-show="supplybook.name.$dirty &&supplybook.name.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="supplybook.name.$dirty&&supplybook.name.$valid" ></i>
+    </ion-item>
+    <ion-item class="item item-input item-select">
+    <div class="input-label text">
+      类型
+    </div>
+    <select ng-model="book.type">
+    <option value="">请选择</option>
+      <option>言情</option>
+      <option>玄幻</option>
+      <option>其他</option>
+    </select>
+    </ion-item>
+    <ion-item class="item item-input item-select">
+    <div class="input-label text">
+      标签
+    </div>
+    <select ng-model="book.tags">
+    <option value="">请选择</option>
+      <option>自创</option>
+      <option>感悟</option>
+      <option>其他</option>
+    </select>
+    </ion-item>
+    <ion-item class="item item-toggle text">
+     发布书籍
+     <label class="toggle toggle-balanced" style="margin-top:-10px;">
+       <input type="checkbox" ng-model="book.block">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+    </ion-item>
+    <ion-item class="item item-input">
+    <textarea ng-model="book.bintroduce" style="height:100px;resize:none;" type="text" placeholder="书籍介绍" name="introduce" ng-minlength="10" ng-maxlength="100" required></textarea>
+    <i class="icon ion-android-close assertive ion" ng-show="supplybook.introduce.$dirty && supplybook.introduce.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="supplybook.introduce.$dirty && supplybook.introduce.$valid"></i>
+    </ion-item>
+    <button class="button button-block button-assertive text" ng-click="supplyInfo()" ng-disabled="supplybook.name.$invalid ||supplybook.introduce.$invalid">确认修改</button>
+</form>
+    </ion-content>
+</ion-view>

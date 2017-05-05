@@ -1,0 +1,15 @@
+[{
+	"uid": 2,
+	"uname": "李明",
+	"uimage": "img/adam.jpg",
+	"nrmc": 12,
+	"lastmessage": "你在做什么",
+	"origintime": "2017-04-04 09:14:54"
+}, {
+	"uid": 3,
+	"uname": "刘志豪",
+	"uimage": "img/adam.jpg",
+	"nrmc": 8,
+	"lastmessage": "快来玩啊",
+	"origintime": "2017-04-03 08:25:30"
+}]

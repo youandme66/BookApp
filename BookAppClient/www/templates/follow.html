@@ -1,0 +1,19 @@
+<ion-view view-title="我的关注">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">我的关注</div>
+	</ion-header-bar>
+	<ion-content>
+	<ion-list class="list">
+    <ion-item class="item item-avatar" href="" ng-repeat="follow in follows">
+      <img ng-src="{{follow.uimage}}">
+      <h2 class="text" ng-bind="follow.uname"></h2>
+      <p  class="text" ng-bind="follow.signature"></p>
+      <ion-option-button class="button-energized text">取消关注</ion-option-button>
+    </ion-item>
+   </ion-list>
+        </ion-content>
+</ion-view>

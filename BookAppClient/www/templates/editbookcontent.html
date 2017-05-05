@@ -1,0 +1,17 @@
+<ion-view view-title="编辑小说">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text" ng-bind="numname"></div>
+        <div class="buttons">
+        <button class="button button-icon icon  ion-ios-list-outline" ng-show="!isWrite" ng-click="startEdit()"></button>
+        <button class="button button-icon icon  ion-ios-checkmark-outline" ng-show="isWrite" ng-click="subContent()"></button>
+    	</div>
+	</ion-header-bar>
+    <ion-content has-subheader="true">
+    <ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+    <textarea class="inbook" ng-disabled="!isWrite" ng-model="book.content"></textarea>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="通讯录">
+<ion-content has-subheader="true" class="rj-stable-content" delegate-handle="sideScroll" id="userRegister">
+<div class="list text">
+
+  <a class="item item-icon-left item-icon-right" ng-click="go('bookfriend')">
+    <i class="icon ion-ios-people-outline"></i>
+    <h2 class="text">我的书友</h2>
+    <i class="icon ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left item-icon-right" ng-click="go('follow')">
+    <i class="icon ion-ios-heart-outline"></i>
+     <h2 class="text">我的关注</h2>
+     <i class="icon ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left" ng-click="go('message')">
+    <i class="icon ion-ios-chatbubble-outline"></i>
+   <h2 class="text">我的消息</h2>
+    <span class="badge badge-assertive" ng-bind="nrmc"></span>
+  </a>
+
+  <a class="item item-icon-left" ng-click="go('dynamic')">
+    <i class="icon ion-ios-cloud-outline"></i>
+    <h2 class="text">动态</h2>
+  </a>
+
+</div>
+</ion-content>
+</ion-view>

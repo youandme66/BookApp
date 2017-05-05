@@ -1,0 +1,27 @@
+var express = require('express');
+var router = express.Router();
+var userCtrl = require('../controller/userCtrl');
+router.post('/register',userCtrl.register);
+router.post('/login',userCtrl.login);
+router.post('/supplyInfo',userCtrl.supplyInfo);
+router.post('/updatePassword',userCtrl.updatePassword);
+router.post('/updateSetting',userCtrl.updateSetting);
+router.post('/getUserInfor',userCtrl.getUserInfor);
+router.post('/getUserAllInfor',userCtrl.getUserAllInfor);
+router.post('/searchFriend',userCtrl.searchFriend);
+router.post('/addFriend',userCtrl.addFriend);
+router.post('/getmyfriend',userCtrl.getMyFriend);
+router.post('/refusefriend',userCtrl.refuseFriend);
+router.post('/deletefriend',userCtrl.deleteFriend);
+router.post('/myagreefriend',userCtrl.myAgreeFriend);
+router.post('/cancelpost',userCtrl.cancelPost);
+router.post('/getMessage',userCtrl.getMessage);
+router.post('/getLastOneMessage',userCtrl.getLastOneMessage);
+router.post('/deleteMessage',userCtrl.deleteMessage);
+router.post('/getOnReadMessage',userCtrl.getOnReadMessage);
+router.post('/getMyFollow',userCtrl.getMyFollow);
+router.post('/userImageUpload',userCtrl.userImageUpload);
+router.post('/addBook',userCtrl.addBook); 
+
+router.post('/exit',userCtrl.exit);
+module.exports=router;

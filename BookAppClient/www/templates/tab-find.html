@@ -1,0 +1,89 @@
+<ion-view view-title="发现">
+<ion-header-bar class="bar bar-subheader item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="搜索">
+  </label>
+  <button class="button button-calm">
+    搜索
+  </button>
+</ion-header-bar>
+<ion-content has-subheader="true" class="rj-stable-content" delegate-handle="sideScroll">
+ <ion-refresher
+    pulling-text="下拉刷新..."
+    on-refresh="doRefresh()">
+ </ion-refresher>
+ <div class="row">
+  <div class="col"><a class="tab-item" href="">
+        <i class="icon ion-ios-monitor positive">
+        </i>
+        读书广场
+  </a></div>
+  <div class="col">  <a class="tab-item" href="">
+    <i class="icon icon ion-ios-people positive"></i>
+    读书活动
+  </a></div>
+  <div class="col"> <a class="tab-item" href="">
+    <i class="icon ion-ios-book positive"></i>
+   书店
+  </a></div>
+</div>
+
+	<div class="list">
+
+  <div class="item item-avatar">
+    <img src="img/mcfly.jpg">
+    <h2 class="text">作者:刘志豪</h2>
+    <p class="text">2017/03/28 22:52 星期二</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="img/delorean.jpg">
+    <p class="text">
+      有些事情是不能告诉别人的，有些事情是不必告诉另人的，有些事情是根本没有办法告诉别人的，而且有些事情是：即使告诉了别人，你也马上会后悔的。所以，假使你够聪明，那么，最后的办法就是静下来，啃啮自己的寂寞，或者反过来说，让寂寞来吞噬你。
+    </p>
+    </div>
+    <div class="item item-body" style="padding:0px;">
+    <div class="row" style="padding:0px;">
+      <div class="col text-center">
+        <i class="icon ion-ios-heart-outline assertive ionbig">
+        </i>
+    </div>
+      <div class="col text-center" style="border-left:1px solid #dddddd;">
+        <i class="icon  ion-ios-keypad-outline balanced ionbig">
+        </i>
+       </div>
+    </div>
+  </div>
+</div>
+<div class="list">
+  <div class="item item-avatar"  ng-click="bookstore()">
+    <img src="img/mcfly.jpg"/>
+    <h2 class="text">书店:<span>新华书店<span>&nbsp;&nbsp;&nbsp;&nbsp;原作者:<span>刘志豪</span></h2>
+    <p class="text">2017/03/28 22:52 星期二</p>
+  </div>
+  <div class="item item-body">
+    <img class="full-image" ng-src="{{url+'/book_images/default.jpg'}}">
+    <p class="text">
+      有些事情是不能告诉别人的，有些事情是不必告诉另人的，有些事情是根本没有办法告诉别人的，而且有些事情是：即使告诉了别人，你也马上会后悔的。所以，假使你够聪明，那么，最后的办法就是静下来，啃啮自己的寂寞，或者反过来说，让寂寞来吞噬你。
+    </p>
+    </div>
+    <div class="item item-body" style="padding:0px;">
+        <div class="row" style="padding:0px;">
+          <div class="col" style="text-align:center;">
+            <i class="icon ion-ios-heart-outline assertive ionbig">
+            </i>
+        </div>
+          <div class="col" style="border-left:1px solid #dddddd;text-align:center;">
+            <i class="icon  ion-ios-keypad-outline balanced ionbig">
+            </i>
+           </div>
+        </div>
+    </div>
+</div>
+<ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="1%">
+</ion-infinite-scroll>
+</ion-content>
+</ion-view>

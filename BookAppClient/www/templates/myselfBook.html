@@ -1,0 +1,24 @@
+<ion-view view-title="我的书籍">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+        <div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">我的书籍</div>
+        <div class="buttons">
+        <a class="button button-icon icon  ion-ios-plus-outline" href="#/addbook"></a>
+    	</div>
+     </ion-header-bar>
+     <ion-content has-subheader="true" rj-close-back-drop>
+     	<div class="item text" ng-repeat="item in mybook">
+         	<div class="row">
+         		<div class="col text" ng-repeat="book in item" on-hold="bookPopup(book.bid)" ng-click="addbooknumber(book.bid,book.bname)">
+         			<div class="box">
+  					<img ng-src="{{url+book.bimage}}">
+   					<div ng-bind="book.bname"></div>
+				   </div>
+         		</div>
+         	</div>
+         </div>
+     </ion-content>
+</ion-view>

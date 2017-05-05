@@ -1,0 +1,21 @@
+<ion-view view-title="我的消息">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">我的消息</div>
+	</ion-header-bar>
+	<ion-content>
+        <ion-list>
+            <ion-item ng-repeat="message in messages" class="item-avatar" ng-click="messageDetils(message.uid)">
+                <img ng-src="{{url+message.uimage}}">
+                <span class="rj-sm-red-icon text" ng-show="message.showHint"><p ng-bind="message.nrmc"></p></span>
+                <h2 class="text" ng-bind="message.uname"></h2>
+                <p class="rj-list-p text" ng-bind="message.lastmessage"></p>
+                <span class="rj-push-right" ng-bind="message.time"></span>
+                <ion-option-button class="button-assertive text" ng-click="deleteMessage(message.uid)">&nbsp;&nbsp;&nbsp;&nbsp;删除&nbsp;&nbsp;&nbsp;&nbsp;</ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

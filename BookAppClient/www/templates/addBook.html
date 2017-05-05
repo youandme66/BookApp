@@ -1,0 +1,49 @@
+<ion-view view-title="添加书籍">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+        <div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">添加书籍</div>
+     </ion-header-bar>
+<ion-content has-subheader="true">
+	<div class="list list-inset">
+	<form name="addbook" novalidate>
+	<label class="item item-input">
+		<input type="text" placeholder="书籍名" name="name" ng-model="book.name" ng-minlength="2" ng-maxlength="8" required>
+		<i class="icon ion-android-close assertive ion" ng-show="addbook.name.$dirty && addbook.name.$invalid"></i>
+		<i class="icon ion-android-done balanced ion" ng-show="addbook.name.$dirty && addbook.name.$valid"></i>
+	</label>
+	<label class="item item-input item-select">
+    <div class="input-label">
+      类型
+    </div>
+    <select ng-model="book.type">
+    <option value="">请选择</option>
+      <option>言情</option>
+      <option>玄幻</option>
+      <option>其他</option>
+    </select>
+    </label>
+    <label class="item item-input item-select">
+    <div class="input-label">
+      标签
+    </div>
+    <select ng-model="book.tags">
+    <option value="">请选择</option>
+      <option>自创</option>
+      <option>感悟</option>
+      <option>其他</option>
+    </select>
+    </label>
+    <label class="item item-input">
+    <textarea ng-model="book.introduce" style="height:100px;resize:none;" type="text" placeholder="书籍介绍" name="introduce" ng-minlength="10" ng-maxlength="100" required></textarea>
+    <i class="icon ion-android-close assertive ion" ng-show="addbook.introduce.$dirty && addbook.introduce.$invalid"></i>
+    <i class="icon ion-android-done balanced ion" ng-show="addbook.introduce.$dirty && addbook.introduce.$valid"></i>
+    </label>
+    <button class="button button-block button-calm" ng-disabled="addbook.name.$dirty && addbook.name.$invalid || addbook.introduce.$dirty && addbook.introduce.$invalid || addbook.name.$pristine || addbook.introduce.$pristine" ng-click="subAddBook()">确认添加</button>
+	</form>
+	</div>
+</ion-content>
+</ion-view>
+

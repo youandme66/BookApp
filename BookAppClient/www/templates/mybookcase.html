@@ -1,0 +1,26 @@
+<ion-view view-title="我的书架">
+   <ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">我的书架</div>
+	</ion-header-bar>
+    <ion-content style="background: #F5F0B6;">
+	   <div id="book">
+	   	   <h2 class="text">我的书架
+	   	        <em style="margin-left:170px;">
+	   	            <a href="#" class="text" target="_blank">&gt;&gt;书店</a>
+	   	        </em>
+	   	   </h2>
+	   	   <ul>
+	   	   	   <li ng-repeat="book  in  bookList">
+	   	   	   	    <a href="{{book.link}}" target="_blank"><img ng-src="{{book.url}}"  alt="{{book.alt}}" style="width: 80px;height: 103px;"></a>
+	   	   	   </li>    	   	    
+	   	   </ul>
+	   	   <div class="clear"></div>
+
+	   </div>	   
+     
+    </ion-content>
+</ion-view>

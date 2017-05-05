@@ -1,0 +1,50 @@
+<ion-view view-title="个人信息">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">个人信息</div>
+	</ion-header-bar>
+	<ion-content has-subheader="true" class="rj-stable-content color-bg" delegate-handle="sideScroll">
+		<div class="list setting text"  rj-close-back-drop>
+          <div class="item item-divide" href="#/showinfo">
+            <img src="img/portrait.jpg" class="portrait">
+        <div class="nickname">
+          <p class="name" style="font-size:15px;height:18px;">昵称:<strong ng-bind="uname"></strong></p>
+          <p class="num" style="font-size:15px;">手机号:<span ng-bind="uphone"></span></p>
+        </div>
+          </div>
+          <div class="item item-icon-left item-divide" ng-click="popupOptions()">
+            <i class="icon ion-android-drafts"></i>
+            <span class="item-text">上传头像</span>
+          </div>
+          <div class="item item-icon-left" ng-click="supplyInfoPopup()">
+            <i class="icon ion-android-star-outline"></i>
+            <span class="item-text">信息完善</span>
+          </div>
+
+      <div class="item  item-icon-left item-divide">
+        <i class="icon ion-ios-pricetags-outline"></i>
+        <span class="item-text">卷币</span>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-android-send"></i>
+        <span class="item-text">我的书架</span>
+      </div>
+
+      <div class="item item-icon-left item-divide" ng-click="updatePasswordPopup()">
+            <i class="icon ion-android-happy"></i>
+            <span class="item-text">密码修改</span>
+          </div>
+
+          <div class="item item-icon-left item-divide" ng-click="isPushMessagePopup()">
+            <i class="icon ion-gear-a"></i>
+            <span class="item-text">设置</span>
+          </div>
+          <div class="item-divide">
+            <button class="button button-block button-assertive text" ng-click="exitapp()">退出登录</button>
+          </div>
+        </div>
+	</ion-content>
+</ion-view>

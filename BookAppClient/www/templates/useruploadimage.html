@@ -1,0 +1,12 @@
+<ion-list>
+<ion-item class="upfilebox">
+  <input type="file" id="one-input" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload(this.files)">
+   <label style="margin-left:10px;margin-top:10px;">选择图片</label>
+</ion-item>
+<ion-item>
+  <img ng-show="imgSrc" ng-src="{{imgSrc}}" style="width:80px;height: 80px;"/>
+</ion-item>
+<ion-item>
+  <button class="button button-block button-calm">上传图片</button>
+</ion-item>
+</ion-list>

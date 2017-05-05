@@ -1,0 +1,12 @@
+<ion-header-bar align-title="center" class="bar-dark">
+<div class="wodivh1 title text">添加章数</div>
+</ion-header-bar>
+<ion-list>
+	<ion-item class="my-popup" style="margin-top:44px;">
+        <h2 class="text">第{{number}}章</h2>
+    </ion-item>
+    <ion-item class="item item-input">
+        <input type="text" name="num" placeholder="章名" ng-model="popup.numname">
+    </ion-item>
+    <button class="button button-block button-calm" ng-click="addBookNumber()">确认</button>
+</ion-list>

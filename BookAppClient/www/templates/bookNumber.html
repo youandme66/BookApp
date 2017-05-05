@@ -1,0 +1,23 @@
+<ion-view view-title="书籍章数">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text" ng-bind="bname"></div>
+        <div class="buttons">
+        <button class="button button-icon icon  ion-ios-plus-outline" ng-click="addBookNumberPopup()"></button>
+    	</div>
+	</ion-header-bar>
+	<ion-content has-subheader="true" rj-close-back-drop>
+		<div class="list text">
+			<div class="item" style="text-align:center;" ng-show="booknumber.length==0">
+			你的这篇小说还没有章数，赶快添加吧！
+			</div>
+			<div class="item item-icon-right" ng-repeat="data in booknumber" ng-click="editBook(data.id,data.name)">
+    			<span>第</span><span ng-bind="$index+1"></span><span>章</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span ng-bind="data.name"></span>
+    			<i class="icon ion-ios-arrow-forward"></i>
+  			</div>
+		</div>
+	</ion-content>
+</ion-view>

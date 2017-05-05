@@ -1,0 +1,21 @@
+<ion-view view-title="找回密码">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">找回密码</div>
+	</ion-header-bar>
+	<ion-content has-subheader="true">
+	<form name="forget" novalidate>
+		<div class="list list-inset">
+		<label class="item item-input">
+       <input type="text" placeholder="手机号" name="phone" ng-model="uphone" ng-pattern="/^[0-9]{11}$/" required>
+       <i class="icon ion-android-close assertive ion" ng-show="forget.phone.$dirty &&forget.phone.$invalid"></i>
+      <i class="icon ion-android-done balanced ion" ng-show="forget.phone.$dirty&&forget.phone.$valid" ></i>
+        </label>
+        <a class="button button-block button-calm" ng-disabled="forget.phone.$dirty &&forget.phone.$invalid || forget.phone.$pristine" href="#/forgetstep2">下一步</a>
+		</div> 
+	</form>
+	</ion-content>
+</ion-view>

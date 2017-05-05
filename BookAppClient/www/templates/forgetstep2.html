@@ -1,0 +1,24 @@
+<ion-view view-title="密保验证">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button no-animation button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">密保验证</div>
+	</ion-header-bar>
+	<ion-content has-subheader="true">
+	<form name="forget" novalidate>
+		<div class="list list-inset">
+		<label class="item">
+        	<p>你的母亲的名字?</p>
+        </label>
+		<label class="item item-input">
+       <input type="text" placeholder="答案" name="answer" ng-model="uanswer" required>
+       <i class="icon ion-android-close assertive ion" ng-show="forget.answer.$dirty &&forget.answer.$invalid"></i>
+      <i class="icon ion-android-done balanced ion" ng-show="forget.answer.$dirty&&forget.answer.$valid" ></i>
+        </label>
+        <a class="button button-block button-calm" ng-disabled="forget.answer.$dirty &&forget.answer.$invalid || forget.answer.$pristine" href="#/tab/find">提交</a>
+		</div> 
+	</form>
+	</ion-content>
+</ion-view>

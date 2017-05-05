@@ -1,0 +1,78 @@
+<ion-view view-title="我的书友">
+	<ion-header-bar align-title="center" class="bar-stable bar-dark">
+		<div class="buttons">
+            <button class="button button-icon ion-ios-arrow-back" my-back>
+            </button>
+        </div>
+        <div class="wodivh1 title text">我的书友</div>
+	</ion-header-bar>
+	<ion-content>
+        <ion-list>
+        <ion-item class="rj-item" href="#/addfriend">
+        <div class="rj-contacts-pic rj-orange-bgc">
+                    <i class="ion-person-add"></i>
+        </div>
+        <h2 class="text">添加书友</h2>
+        </ion-item>
+        <ion-item class="rj-item" href="">
+                 <div class="rj-contacts-pic rj-green-bgc">
+                     <i class="ion-person-stalker"></i>
+                 </div>
+                 <h2 class="text">我的社区</h2>
+        </ion-item>
+        <ion-item class="rj-item" href="">
+                 <div class="rj-contacts-pic rj-blue-bgc">
+                     <i class="ion-ios-pricetag"></i>
+                 </div>
+                 <h2 class="text">我的活动</h2>
+        </ion-item>
+        <ion-item class="rj-item" href="#/mybookcase">
+                  <div class="rj-contacts-pic rj-blue-bgc">
+                      <i class="ion-person-add"></i>
+                  </div>
+                  <h2 class="text">我的书架</h2>
+        </ion-item>
+        </ion-list>
+        <ion-list>
+        <div class="item item-divider text">
+    		我的书友
+         </div>
+           <ion-list class="list">
+      <ion-item class="item text box" ng-show="data.myfriends.length==0">你还没有书友快去添加吧！</ion-item>
+    <ion-item ng-show="data.myfriends.length>0" class="item item-avatar" href="" ng-repeat="myfriend in data.myfriends" ng-click="chat(myfriend.uid)">
+      <img ng-src="{{url+myfriend.uimage}}">
+      <h2 class="text" ng-bind="myfriend.uname"></h2>
+      <p  class="text" ng-bind="myfriend.signature"></p>
+      <ion-option-button class="button-assertive text" ng-click="deleteFriend(myfriend.uid)">删除书友</ion-option-button>
+    </ion-item>
+   </ion-list>
+        </ion-list>
+        <ion-list>
+        <div class="item item-divider text">
+        待同意的书友
+         </div>
+           <ion-list class="list">
+    <ion-item class="item item-avatar" href="" ng-repeat="myfriend in data.myagree">
+      <img ng-src="{{url+myfriend.uimage}}">
+      <h2 class="text" ng-bind="myfriend.uname"></h2>
+      <p  class="text" ng-bind="myfriend.signature"></p>
+      <ion-option-button class="button-balanced text" ng-click="myAgreeFriend(myfriend.uid)">同意</ion-option-button>
+      <ion-option-button class="button-assertive text" ng-click="refuseFriend(myfriend.uid)">拒绝</ion-option-button>
+    </ion-item>
+   </ion-list>
+        </ion-list>
+        <ion-list>
+        <div class="item item-divider text">
+        已发送请求的书友
+         </div>
+           <ion-list class="list">
+    <ion-item class="item item-avatar" href="" ng-repeat="myfriend in data.youagree">
+      <img ng-src="{{url+myfriend.uimage}}">
+      <h2 class="text" ng-bind="myfriend.uname"></h2>
+      <p  class="text" ng-bind="myfriend.signature"></p>
+      <ion-option-button class="button-assertive text" ng-click="cancelPost(myfriend.uid)">取消请求</ion-option-button>
+    </ion-item>
+   </ion-list>
+        </ion-list>
+        </ion-content>
+</ion-view>
